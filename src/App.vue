@@ -1,27 +1,54 @@
 <template>
-  <div id="app" class="container is-widescreen">
-    <img width="25%" src="https://commons.wikimedia.org/wiki/File:Vue.js_Logo.svg">
+  <div id="app">
+    <Navbar/>
     <HelloWorld/>
-    <Expertise/>
+    <Expertise/> 
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <div class="container has-text-centered has-text-weight-light">
+          <h5 class="subtitle is-marginless" style="font-family: monospace;">
+            "I will always choose a lazy person to do a difficult job.
+Because, he will find an easy way to do it."
+          </h5>
+          <p >
+           Bill Gates
+          </p>
+        </div>
+      </div>
+    </section>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Navbar from "./components/Layout/Navbar";
+import Footer from "./components/Layout/Footer";
+
 import Expertise from "./components/Expertise";
+import HelloWorld from "./components/HelloWorld";
 
 export default {
   name: "App",
   components: {
+    Navbar,
+    Footer,
+    Expertise,
     HelloWorld,
-    Expertise
+
   }
 };
 </script>
 
-<style>
+<style >
 #app {
+  background-color: #363636;
+}
+* {
+  font-family: "Open Sans", sans-serif;
+}
 
+h5 {
+  font-family: "Oswald", sans-serif;
 }
 
 /* TODO: tablet breakpoint -1px to 768px for iPad styles */
