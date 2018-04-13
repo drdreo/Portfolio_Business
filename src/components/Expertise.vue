@@ -5,6 +5,7 @@
       <div class="columns">
 
         <div class="column">
+
           <h3 class="title is-3">I enhance businesses <br class="is-hidden-mobile"/>like yours.</h3>
           <p>The tech world is evolving at warp speed. Whether it's an app, website or platform, we build it with the newest technologies. If you're going to invest, why not in the best?</p>
         </div>

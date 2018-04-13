@@ -1,6 +1,6 @@
-# test-project
+# Portfolio Business
 
-> A Vue.js project
+> A Vue.js portfolio page about Andreas K. Hahn.
 
 ## Build Setup
 
