@@ -5,7 +5,7 @@
       <div class="columns">
 
         <div class="column">
-          <h3 class="title is-3">I enhance businesses <br class="is-hidden-mobile"/>like yours.</h3>
+          <h3 class="title punch-title is-3">I enhance businesses <br class="is-hidden-mobile"/>like yours.</h3>
           <p>The tech world is evolving at warp speed. Whether it's an app, website or platform, we build it with the newest technologies. If you're going to invest, why not in the best?</p>
         </div>
       
@@ -22,7 +22,7 @@
               <p class="has-text-weight-light">Users evaluate a design in 50 milliseconds. You need people to take your brand seriously. I will help you make those first few milliseconds count.</p>
             </div>    
 
-            <div class="column is-6-tablet">
+            <div class="column is-6-tablet border-left">
               <div class="is-horizontal-center is-flex">
                 <figure class="image is-4by3">
                   <img src="http://via.placeholder.com/200x200"/>
@@ -32,7 +32,7 @@
               <p class="has-text-weight-light">Bringing your idea to life with the MEAN stack. Expertise in Node.js and Angular+. Creating sustainable code base for easy future maintainance</p>
             </div>
 
-            <div class="column is-12-mobile">
+            <div class="column is-12-mobile border-top">
               <h5 class="subtitle is-5">Digital Strategy</h5>
               <p class="has-text-weight-light">I’ll work with you to understand your business and make sure everything we do aligns with your goals.</p>
             </div> 
@@ -47,11 +47,6 @@
 <script>
 export default {
   name: "Expertise",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-  }
 };
 </script>
 

@@ -1,0 +1,54 @@
+/* // Import the initial variables
+@import "./sass/utilities/initial-variables";
+@import "./sass/utilities/functions";
+
+// Set your own initial variables
+// Update blue
+$blue: #72d0eb;
+// Add pink and its invert
+$pink: #ffb3b3;
+$pink-invert: #fff;
+// Add a serif family
+$family-serif: "Oswald", "Georgia", serif;
+
+// Set the derived variables
+
+$background: $dark;
+
+$family-primary: $family-serif;
+
+// Setup your Custom Colors
+$linkedin: #0077b5;
+$linkedin-invert: findColorInvert($linkedin);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+
+// Add new color variables to the color map.
+@import "./sass/utilities/derived-variables";
+$addColors: (
+  "twitter":($twitter, $twitter-invert),
+  "linkedin": ($linkedin, $linkedin-invert)
+);
+$colors: map-merge($colors, $addColors);
+
+// Import the rest of Bulma
+@import "./bulma"; */
+
+// my styles start here
+.border-left {
+  box-shadow: -1.9rem 0px 15px -37px rgba(148, 148, 148, 1);
+}
+
+.border-right {
+  box-shadow: 1.9rem 0px 15px -37px rgba(148, 148, 148, 1);
+}
+
+.border-top {
+  box-shadow: 0px -1.9rem 15px -37px rgba(148, 148, 148, 1);
+}
+.border-bottom {
+  box-shadow: 0px 1.9rem 15px -37px rgba(148, 148, 148, 1);
+}
+.punch-title {
+  font-family: Oswald;
+}

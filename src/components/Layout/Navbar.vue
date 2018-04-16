@@ -4,23 +4,23 @@
     <a class="navbar-item" href="https://andreas-hahn.at">
       <img src="https://andreas-hahn.at/Images/logo.png" alt="Bulma: a modern CSS framework based on Flexbox">
     </a>
-    <div class="navbar-burger burger" v-on:click="toggleNavbar" data-target="navbarExampleTransparentExample">
+    <div class="navbar-burger burger" v-on:click="toggleNavbar" data-target="navbarLinks">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </div>
 
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
+  <div id="navbarLinks" class="navbar-menu" >
    
     <div class="navbar-end">
-      <a class="navbar-item" href="https://bulma.io/">
-        Partners
+      <a class="navbar-item" href="#contact" v-on:click.prevent="scrollTo">
+        <span>Partners</span>
       </a>
-      <a class="navbar-item" href="https://bulma.io/">
+      <a class="navbar-item" href="#contact" v-on:click.prevent="scrollTo">
         Expertise
       </a>
-      <a class="navbar-item" href="https://bulma.io/">
+      <a class="navbar-item" href="#contact" v-on:click.prevent="scrollTo">
         Contact
       </a>
     </div>
@@ -33,13 +33,19 @@ export default {
   name: "Navbar",
   methods: {
     toggleNavbar: function(event) {
+      console.log("t");
       // Get the target from the "data-target" attribute
       var target = event.target.dataset.target;
       var $target = document.getElementById(target);
 
       // Toggle the class on both the "navbar-burger" and the "navbar-menu"
       event.target.classList.toggle("is-active");
-      $target.classList.toggle("is-active");
+      if ($target) $target.classList.toggle("is-active");
+    },
+    scrollTo: function(e) {
+      console.log(e);
+      console.log(e.target.getAttribute("href"));
+      
     }
   }
 };
