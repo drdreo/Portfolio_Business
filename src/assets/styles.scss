@@ -1,4 +1,5 @@
 /* // Import the initial variables
+
 @import "./sass/utilities/initial-variables";
 @import "./sass/utilities/functions";
 
@@ -52,3 +53,4 @@ $colors: map-merge($colors, $addColors);
 .punch-title {
   font-family: Oswald;
 }
+
