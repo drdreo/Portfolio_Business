@@ -2,9 +2,9 @@
 <nav class="navbar is-dark container">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://andreas-hahn.at">
-      <img src="https://andreas-hahn.at/Images/logo.png" alt="Bulma: a modern CSS framework based on Flexbox">
+      <img src="https://andreas-hahn.at/Images/logo.png" alt="Andreas K. Hahn Portfolio Page">
     </a>
-    <div class="navbar-burger burger" v-on:click="toggleNavbar" data-target="navbarLinks">
+    <div id="navbarBurger" class="navbar-burger burger" v-on:click="toggleNavbar">
       <span></span>
       <span></span>
       <span></span>
@@ -13,16 +13,29 @@
 
   <div id="navbarLinks" class="navbar-menu" >
    
-    <div class="navbar-end">
-      <a class="navbar-item" href="#contact" v-on:click.prevent="scrollTo">
-        <span>Partners</span>
-      </a>
-      <a class="navbar-item" href="#contact" v-on:click.prevent="scrollTo">
-        Expertise
-      </a>
-      <a class="navbar-item" href="#contact" v-on:click.prevent="scrollTo">
-        Contact
-      </a>
+   <!-- mobile nav -->
+    <div class="navbar-end is-hidden-desktop">
+        <a class="navbar-item blue2" data-scroll-to="partners" @click="scrollTo">
+          Partners
+        </a>
+        <a class="navbar-item blue3" data-scroll-to="expertise" @click="scrollTo">
+          Expertise
+        </a>
+        <a class="navbar-item blue4" data-scroll-to="contact" @click="scrollTo">
+          Contact
+        </a>
+    </div>
+    <!-- desktop nav -->
+    <div class="navbar-end is-hidden-touch">
+        <a class="navbar-item" data-scroll-to="partners" @click="scrollTo">
+          Partners
+        </a>
+        <a class="navbar-item" data-scroll-to="expertise" @click="scrollTo">
+          Expertise
+        </a>
+        <a class="navbar-item" data-scroll-to="contact" @click="scrollTo">
+          Contact
+        </a>
     </div>
   </div>
 </nav>
@@ -32,20 +45,21 @@
 export default {
   name: "Navbar",
   methods: {
-    toggleNavbar: function(event) {
-      console.log("t");
-      // Get the target from the "data-target" attribute
-      var target = event.target.dataset.target;
-      var $target = document.getElementById(target);
-
-      // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-      event.target.classList.toggle("is-active");
-      if ($target) $target.classList.toggle("is-active");
+    toggleNavbar: function() {
+      document.getElementById("navbarLinks").classList.toggle("is-active");
+      document.getElementById("navbarBurger").classList.toggle("is-active");
     },
     scrollTo: function(e) {
-      console.log(e);
-      console.log(e.target.getAttribute("href"));
-      
+      let scrollTo = e.target.dataset.scrollTo;
+      let target = document.getElementById(scrollTo);
+
+      if (target) {
+        // target.scrollIntoView(true);
+
+        this.$scrollTo(target, 750, { easing: "ease" });
+
+        this.toggleNavbar();
+      }
     }
   }
 };

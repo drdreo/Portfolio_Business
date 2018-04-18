@@ -1,6 +1,6 @@
 <template>
-  <section class="section box">
-
+  <section id="expertise" class="section is-white hero">
+<div class="hero-body">
     <div class="container">
       <div class="columns">
 
@@ -20,6 +20,8 @@
               </div>
               <h5 class="subtitle is-5">Webdesign & UI</h5>
               <p class="has-text-weight-light">Users evaluate a design in 50 milliseconds. You need people to take your brand seriously. I will help you make those first few milliseconds count.</p>
+            <p>Frontend can sometimes feel like someone grabbed a handful of pieces from each of five different puzzles and said to make it look like the picture on all of the boxes.
+            </p>
             </div>    
 
             <div class="column is-6-tablet border-left">
@@ -32,7 +34,13 @@
               <p class="has-text-weight-light">Bringing your idea to life with the MEAN stack. Expertise in Node.js and Angular+. Creating sustainable code base for easy future maintainance</p>
             </div>
 
-            <div class="column is-12-mobile border-top">
+            <div class="column is-6-tablet is-offset-3 is-12-mobile border-top">
+              <h5 class="subtitle is-5">Digital Strategy</h5>
+              <p class="has-text-weight-light">I’ll work with you to understand your business and make sure everything we do aligns with your goals.</p>
+            </div> 
+
+      
+            <div class="column is-12-tablet is-12-mobile border-top">
               <h5 class="subtitle is-5">Digital Strategy</h5>
               <p class="has-text-weight-light">I’ll work with you to understand your business and make sure everything we do aligns with your goals.</p>
             </div> 
@@ -41,12 +49,13 @@
 
       </div>
     </div>
+</div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "Expertise",
+  name: "Expertise"
 };
 </script>
 
