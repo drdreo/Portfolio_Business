@@ -13,16 +13,30 @@
 
   <div id="navbarLinks" class="navbar-menu" >
    
-    <div class="navbar-end">
-      <a class="navbar-item" data-scroll-to="partners" @click="scrollTo">
-        Partners
-      </a>
-      <a class="navbar-item" data-scroll-to="expertise" @click="scrollTo">
-        Expertise
-      </a>
-      <a class="navbar-item" data-scroll-to="contact" @click="scrollTo">
-        Contact
-      </a>
+
+   <!-- mobile nav -->
+    <div class="navbar-end is-hidden-desktop">
+        <a class="navbar-item blue2" data-scroll-to="partners" @click="scrollTo">
+          Partners
+        </a>
+        <a class="navbar-item blue3" data-scroll-to="expertise" @click="scrollTo">
+          Expertise
+        </a>
+        <a class="navbar-item blue4" data-scroll-to="contact" @click="scrollTo">
+          Contact
+        </a>
+    </div>
+    <!-- desktop nav -->
+    <div class="navbar-end is-hidden-touch">
+        <a class="navbar-item" data-scroll-to="partners" @click="scrollTo">
+          Partners
+        </a>
+        <a class="navbar-item" data-scroll-to="expertise" @click="scrollTo">
+          Expertise
+        </a>
+        <a class="navbar-item" data-scroll-to="contact" @click="scrollTo">
+          Contact
+        </a>
     </div>
   </div>
 </nav>
@@ -38,12 +52,15 @@ export default {
     },
     scrollTo: function(e) {
       let scrollTo = e.target.dataset.scrollTo;
-      let element = document.getElementById(scrollTo);
+      let target = document.getElementById(scrollTo);
 
-      if (element) {
+      if (target) {
+        // target.scrollIntoView(true);
+
+        this.$scrollTo(target, 750, { easing: "ease" });
+
         this.toggleNavbar();
-        
-        element.scrollIntoView(true); //TODO make a better scrollTo animation
+
       }
     }
   }

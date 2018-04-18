@@ -54,3 +54,34 @@ $colors: map-merge($colors, $addColors);
   font-family: Oswald;
 }
 
+
+// fix navbar overlay reflows content
+#navbarLinks {
+  @media screen and (max-width: 1087px) {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+  }
+}
+
+.blue1 {
+  background-color: #1b9194;
+  color: #fff;
+}
+.blue2 {
+  background-color: #1b8594;
+  color: #fff;
+}
+.blue3 {
+  background-color: #1b6c94;
+  color: #fff;
+}
+.blue4 {
+  background-color: #1b5a94;
+  color: #fff;
+}
+.blue5 {
+  background-color: #1b4e94;
+    color: #fff;
+}
+
