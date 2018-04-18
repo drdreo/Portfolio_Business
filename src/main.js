@@ -6,6 +6,7 @@ import VueScrollTo from "vue-scrollto";
 import "./assets/styles.scss";
 //import "style-loader!css-loader!sass-loader?modules!./assets/styles.scss";
 
+
 import Vue from "vue";
 import App from "./App";
 
@@ -18,3 +19,4 @@ new Vue({
   components: { App },
   template: "<App/>"
 });
+

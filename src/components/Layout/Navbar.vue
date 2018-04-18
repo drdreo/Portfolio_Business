@@ -13,6 +13,7 @@
 
   <div id="navbarLinks" class="navbar-menu" >
    
+
    <!-- mobile nav -->
     <div class="navbar-end is-hidden-desktop">
         <a class="navbar-item blue2" data-scroll-to="partners" @click="scrollTo">
@@ -59,6 +60,7 @@ export default {
         this.$scrollTo(target, 750, { easing: "ease" });
 
         this.toggleNavbar();
+
       }
     }
   }
