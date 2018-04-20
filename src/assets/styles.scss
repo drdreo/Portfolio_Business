@@ -1,4 +1,5 @@
 /* // Import the initial variables
+
 @import "./sass/utilities/initial-variables";
 @import "./sass/utilities/functions";
 
@@ -58,6 +59,7 @@ $colors: map-merge($colors, $addColors);
   box-shadow: initial;
 }
 
+
 // fix navbar overlay reflows content
 #navbarLinks {
   @media screen and (max-width: 1087px) {
@@ -101,3 +103,4 @@ a.navbar-item.blue4 {
   background-color: #5f4272;
   color: #fff;
 }
+
