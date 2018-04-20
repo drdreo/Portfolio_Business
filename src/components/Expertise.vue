@@ -61,7 +61,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 .is-horizontal-center {
   justify-content: center;
   padding-bottom: 12px;

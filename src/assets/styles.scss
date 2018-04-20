@@ -54,6 +54,11 @@ $colors: map-merge($colors, $addColors);
   font-family: Oswald;
 }
 
+// remove navbar border bottom
+.navbar {
+  box-shadow: initial;
+}
+
 
 // fix navbar overlay reflows content
 #navbarLinks {
