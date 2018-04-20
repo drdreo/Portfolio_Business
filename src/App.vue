@@ -2,6 +2,8 @@
   <div id="app">
     <Navbar/>
 
+    <Landing/>
+    <Clients/>
     <Expertise/> 
     <Quote/>
     <Contact/>
@@ -14,6 +16,8 @@
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 
+import Landing from "./components/Landing";
+import Clients from "./components/Clients";
 import Expertise from "./components/Expertise";
 import Quote from "./components/Quote";
 import Contact from "./components/Contact";
@@ -23,6 +27,8 @@ export default {
   components: {
     Navbar,
     Footer,
+    Landing,
+    Clients,
     Expertise,
     Quote,
     Contact

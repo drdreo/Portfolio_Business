@@ -53,6 +53,11 @@ $colors: map-merge($colors, $addColors);
   font-family: Oswald;
 }
 
+// remove navbar border bottom
+.navbar {
+  box-shadow: initial;
+}
+
 // fix navbar overlay reflows content
 #navbarLinks {
   @media screen and (max-width: 1087px) {
@@ -61,24 +66,38 @@ $colors: map-merge($colors, $addColors);
     width: 100vw;
   }
 }
+a.navbar-item.blue2 {
+  min-height: 5rem;
+}
+a.navbar-item.blue3 {
+  min-height: 5rem;
+}
+a.navbar-item.blue4 {
+  min-height: 5rem;
+}
 
 .blue1 {
   background-color: #1b9194;
   color: #fff;
 }
 .blue2 {
-  background-color: #1b8594;
+  //background-color: #1b8594;
+  background-color: #50a2d2;
   color: #fff;
 }
 .blue3 {
-  background-color: #1b6c94;
+  //background-color: #1b6c94;
+  background-color: #4a7db6;
   color: #fff;
 }
 .blue4 {
-  background-color: #1b5a94;
+  //background-color: #1b5a94;
+  background-color: #63539e;
+
   color: #fff;
 }
 .blue5 {
-  background-color: #1b4e94;
-    color: #fff;
+  ///background-color: #1b4e94;
+  background-color: #5f4272;
+  color: #fff;
 }
