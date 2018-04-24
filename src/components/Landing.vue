@@ -1,10 +1,11 @@
 <template>
-  <section id="landing" class="is-dark hero">
+  <section id="landing" class="is-dark hero is-fullheight">
     <div class="hero-body">
         <div class="container is-fluid">
           <div class="columns">
             <div class="column is-flex is-12-mobile has-content-centered">
-                <figure class="image" style="background-image: url('../assets/logo.svg')" width="200">
+                <figure class="image" width="200">
+                <img src="../assets/logo.svg"/>
                 </figure>
             </div>
 
