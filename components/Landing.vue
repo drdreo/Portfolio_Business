@@ -9,7 +9,7 @@
                         </figure>
                     </div>
 
-                    <div id="landing-text" class="column is-flex has-content-centered">
+                    <div id="landing-text" class="column is-flex offscreen has-content-centered">
                         <h1 class="title is-1 punch-title">
                             <span class="punch-title has-text-primary">Web</span> Developer,
                             <br>freelancer<span class="has-text-primary">.</span>
@@ -22,39 +22,41 @@
 </template>
 
 <script>
-  import { TweenMax, Power2, TimelineMax } from 'gsap'
+    import {TweenMax, Power2, TimelineMax} from "gsap";
 
-  /* eslint no-unused-vars: "off" */
-  const fixTreeShaking = TweenMax
+    /* eslint no-unused-vars: "off" */
+    const fixTreeShaking = TweenMax;
 
-  export default {
-    name: 'Landing',
-    mounted () {
-      this.showLandingText()
-    },
-    methods: {
-      showLandingText () {
-        const landingText = document.getElementById('landing-text')
-        const logo = document.getElementById('landing-logo')
+    export default {
+        name: "Landing",
+        mounted() {
+            this.showLandingText();
+        },
+        methods: {
+            showLandingText() {
+                const landingText = document.getElementById("landing-text");
+                const logo = document.getElementById("landing-logo");
 
-        let startPoint = 50
-        if (window.innerWidth <= 768) {
-          startPoint = 0
+                let startPoint = 50;
+                if (window.innerWidth <= 768) {
+                    startPoint = 0;
+                }
+
+                const tlSet = new TimelineMax({paused: false});
+                tlSet.set(landingText, {xPercent: 200});
+                tlSet.set(logo, {xPercent: startPoint});
+                // show landingText again to prevent flashing up during startup
+                landingText.classList.remove("offscreen");
+
+                const tl = new TimelineMax({paused: true, delay: 3.5});
+                tl.to([landingText, logo], 1.2, {
+                    xPercent: 0,
+                    ease: Power2.easeOut
+                });
+                tl.play();
+            }
         }
-
-        const tlSet = new TimelineMax({ paused: false })
-        tlSet.set(landingText, { xPercent: 200 })
-        tlSet.set(logo, { xPercent: startPoint })
-
-        const tl = new TimelineMax({ paused: true, delay: 3.5 })
-        tl.to([landingText, logo], 1.2, {
-          xPercent: 0,
-          ease: Power2.easeOut
-        })
-        tl.play()
-      }
-    }
-  }
+    };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -67,6 +69,11 @@
     #landing-text {
         /* prevent svg animation roll over text*/
         z-index: 1;
+
+    }
+
+    #landing-text.offscreen {
+        opacity: 0;
     }
 
     .has-content-centered {
