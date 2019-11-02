@@ -5,7 +5,7 @@
         <div class="columns is-desktop">
           <div class="column">
             <span>
-              © Andreas K. Hahn, 2018
+              © Andreas K. Hahn, 2019
             </span>
           </div>
           <div class="column is-half-desktop">

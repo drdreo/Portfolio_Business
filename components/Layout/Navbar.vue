@@ -2,7 +2,7 @@
     <nav class="navbar is-dark container">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://andreas-hahn.at">
-                <img src="~assets/logo.svg" alt="Andreas K. Hahn Logo">
+                <img src="~assets/logo.png" alt="Andreas K. Hahn Logo">
             </a>
             <div id="navbarBurger" class="navbar-burger burger" @click="toggleNavbar">
                 <span/>
